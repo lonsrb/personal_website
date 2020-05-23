@@ -10,12 +10,26 @@
 // };
 
 $(document).ready(function() {
+    let numBackgrounds = 9;
+    let bgChoosen = Math.floor(Math.random() * numBackgrounds) + 1;
+    document.body.style.backgroundImage = 'url("/images/bg' + bgChoosen + '.jpg")';
+
 
     $(".ranking").each(function () {
 
-        var value = Number($(this).html());
-        var percentage = (value * .0909 * ($(this).width() - 10)) + "px";
+        var valueAsString = $(this).html();
+        var hideNumber = false;
+        if (valueAsString.includes("-")) {
+            hideNumber = true
+            valueAsString = valueAsString.replace('-','');
+        }
+
+        var value = Number(valueAsString);
+        var percentage = (value * (1.0/12.0) * ($(this).width() - 10)) + "px";
         $(this).html("");
+        if (hideNumber) {
+            value = ""
+        }
         $(this).append("<div class='ranking-bar' style='width:" + percentage + "'>" + value + "</div>");
 //        $(this).css("width", percentage);
     });

@@ -1,8 +1,10 @@
 body {
     color: #ffffff;
-    background-image: url("/images/bg1.jpg");
+    /*background-image: url("/images/bg1.jpg");*/
     background-size: cover;
     font-family: "Helvetica Neue", serif;
+    background-position: center;
+
 }
 
 h2 {
