@@ -8,6 +8,9 @@ body {
 h2 {
     text-align: center;
     font-size: 30px ;
+    font-weight: normal;
+    letter-spacing: 1px;
+
 }
 
 h3 {
@@ -105,7 +108,7 @@ position: relative;
 #skills {
 
     /*background-color: #6f3bd0;*/
-    width: 800px;
+    width: 900px;
     margin: 0 auto;
     position: relative;
     min-height: 400px;
@@ -173,7 +176,7 @@ li:hover { background-color: rgba(86, 86, 86, 0.66);}
 #programming-languages-skills .skill { width: 170px;}
 #tools-skills                 .skill { width: 170px;}
 #spoken-skills                .skill { width: 170px;}
-#competency-skills            .skill { width: 310px;}
+#competency-skills            .skill { width: 250px;}
 
 #personal-interests li { width: 375px;}
 #personal-interests li.left  { width: 385px; display: inline-block; text-align: right;}
