@@ -1,10 +1,33 @@
 body {
     color: #ffffff;
+    background-color: #626464;;
     /*background-image: url("/images/bg1.jpg");*/
+    margin: 0; padding: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+#fullpage-wrapper {
     background-size: cover;
     font-family: "Helvetica Neue", serif;
     background-position: center;
+    transition: background 0.5s linear;
 
+    min-width: 100%;
+    min-height: 100%;
+    /*top: 0px;*/
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 1px 0;
+
+    -webkit-transition: background 2.5s linear;
+    -moz-transition: background 2.5s linear;
+    -o-transition: background 2.5s linear;
+    -ms-transition: background 2.5s linear;
+    transition: background 2.5s linear;
 }
 
 h2 {
@@ -83,14 +106,15 @@ position: relative;
     border: #ffffff 14px solid;
     width: 200px;
     height: 200px;
+    overflow: hidden;
     /*border-radius: 100px;*/
 }
 
 #video-container {
     margin: auto;
     margin-top: 20px;
-    width: 560px;
-    height: 315px;
+    width: 720px;
+    height: 405px;
     border: solid 10px #ffffff;
 }
 
