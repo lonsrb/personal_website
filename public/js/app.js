@@ -9,12 +9,22 @@
 //     resize();
 // };
 
-$.fn.preload = function() {
-    this.each(function(){
-        $('<img/>')[0].src = this;
+function getBGImageUrlForNumber(number) {
+    return 'url("/images/bg' + number + '.jpg")';
+}
+
+function preload(arrayOfImages) {
+    $(arrayOfImages).each(function () {
+        let url = getBGImageUrlForNumber(this);
+        console.log("preloading: " + url);
+        // $('<img />').attr('src',url).appendTo('body').css('display','none');
     });
 }
-$(['bg1.jpg','bg2.jpg','bg3.jpg','bg4.jpg','bg5.jpg','bg6.jpg','bg7.jpg','bg8.jpg','bg9.jpg']).preload();
+
+// $(window).load(function(){
+
+// });
+
 
 
 function getBGImageUrl() {
@@ -23,6 +33,9 @@ function getBGImageUrl() {
     return 'url("/images/bg' + bgChoosen + '.jpg")';
 }
 $(document).ready(function() {
+    let images = ['1','2','3','4','5','6','7','8','9'];
+    preload(images);
+
     $('#fullpage-wrapper').css('background-image', getBGImageUrl());
 
     setInterval(function() {
