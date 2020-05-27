@@ -46,7 +46,7 @@ $(document).ready(function() {
         // {
         //     $(this).css('background-image', newUrl);
         // }).fadeTo(4000, 1);
-    }, 9000);
+    }, 1000 * 60);
 
 
 
