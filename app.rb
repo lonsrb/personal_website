@@ -12,6 +12,7 @@ class HelloWorldApp < Sinatra::Base
   # end
   # http://localhost:9292/listings?startIndex=0&count=20&propertyType=land
   #http://localhost:9292/listings?startIndex=21&count=20&propertyType=land,house
+  #
   get '/listings' do
     start_index = params[:startIndex]
     count = params[:count]
@@ -20,7 +21,7 @@ class HelloWorldApp < Sinatra::Base
     file = File.read('listings.json')
     data_array = JSON.parse(file)
     "got data: #{data_array.count} items, start_index: #{start_index}, count: #{count}, property_type: #{property_type}"
-    if property_type != nil
+    if property_type != nil && property_type != ""
       property_types = property_type.split(",")
       data_array = data_array.select {|listing|  property_types.include? listing["propertyType"] }
     end

@@ -1,0 +1,46 @@
+#from https://next.json-generator.com/
+[
+  {
+    'repeat(100)': {
+      id: '{{objectId()}}',
+      thumbUrl: 'https://picsum.photos/id/{{integer(1,1000)}}/600/220.jpg',
+	  address: '{{integer(100, 999)}} {{street()}}',
+      addressLine2: 'New York, NY 100{{integer(0, 9)}}{{integer(0, 9)}}',
+      subTitle(tags) {
+        const statuses = ['', 'New Construction', '','Coming Soon', '', 'Under Contract', ''];
+        return statuses[tags.integer(0, statuses.length - 1)];
+      },
+      price: '{{integer(500, 2000)* 1000}}',
+      propertyType(tags) {
+        const types = ['house', 'condo', 'townhouse','multiFamily', 'land'];
+        return types[tags.integer(0, types.length - 1)];
+      },
+	  squareFootage(tags) {
+        if (this.propertyType == "land") {
+	       return null;
+        }
+        return integer(500, 3500);
+      },
+      beds(tags) {
+        if (this.propertyType == "land") {
+	       return null;
+        }
+        return integer(1, 5);
+      },
+       baths(tags) {
+        if (this.propertyType == "land") {
+	       return null;
+        }
+        return integer(1, 3);
+      },
+      halfBaths(tags) {
+        if (this.propertyType == "land") {
+	       return null;
+        }
+        return integer(0, 1);
+      },
+      isFavorited: '{{bool()}}',
+
+    }
+  }
+]
