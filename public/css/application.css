@@ -131,6 +131,24 @@ position: relative;
     height: 70px;
 }
 
+.code-sample-repo {
+    font-size: 20px;
+    /*background-color: #6f3bd0;*/
+    width: 900px;
+    margin: 0 auto;
+    position: relative;
+    min-height: 400px;
+    border-bottom: solid 4px #ffffff;
+    text-align: center;
+    overflow: hidden;
+}
+
+.code-sample-repo a {
+    text-decoration: none;
+    font-size: 25px;
+    color: #aff6ff;
+}
+
 #skills {
 
     /*background-color: #6f3bd0;*/
