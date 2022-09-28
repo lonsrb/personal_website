@@ -60,7 +60,7 @@ $(document).ready(function() {
         }
 
         var value = Number(valueAsString);
-        var percentage = (value * (1.0/12.0) * ($(this).width() - 10)) + "px";
+        var percentage = (value * (1.0/14.0) * ($(this).width() - 10)) + "px";
         $(this).html("");
         if (hideNumber) {
             value = ""
