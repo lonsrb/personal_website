@@ -1,7 +1,7 @@
 [
   {
     "id": "5f02b3af16ca99e69245176f",
-    "thumbUrl": "https://picsum.photos/id/862/600/220.jpg",
+    "thumbUrl": "https://picsum.photos/id/188/600/220.jpg",
     "address": "528 Rogers Avenue",
     "addressLine2": "New York, NY 10035",
     "price": 631000,
@@ -29,7 +29,7 @@
   },
   {
     "id": "5f02b3aff7dd344aadab05ea",
-    "thumbUrl": "https://picsum.photos/id/346/600/220.jpg",
+    "thumbUrl": "https://picsum.photos/id/240/600/220.jpg",
     "address": "121 Beayer Place",
     "addressLine2": "New York, NY 10011",
     "price": 873000,
@@ -71,7 +71,7 @@
   },
   {
     "id": "5f02b3af900cc3b3e088d0b4",
-    "thumbUrl": "https://picsum.photos/id/934/600/220.jpg",
+    "thumbUrl": "https://picsum.photos/id/637/600/220.jpg",
     "address": "554 Herkimer Street",
     "addressLine2": "New York, NY 10028",
     "price": 1366000,
