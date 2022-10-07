@@ -137,7 +137,7 @@ position: relative;
     width: 900px;
     margin: 0 auto;
     position: relative;
-    min-height: 400px;
+    /*min-height: 100px;*/
     border-bottom: solid 4px #ffffff;
     text-align: center;
     overflow: hidden;
