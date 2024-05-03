@@ -9,6 +9,20 @@
 //     resize();
 // };
 
+function beforePrint() {
+    // $("#content-container").css('background-color', "#33dd33");
+    $('#fullpage-wrapper').height(1000);
+    $('body').height(1053);
+    $("#content-container").height(1002);
+}
+
+function afterPrint() {
+    // $("#content-container").css('background-color', "#dd8833");
+    $("#content-container").height(height);
+    $('#fullpage-wrapper').height(height);
+    $('body').height(height+80);
+}
+
 function getBGImageUrlForNumber(number) {
     return 'url("/images/bg' + number + '.jpg")';
 }
@@ -32,6 +46,8 @@ function getBGImageUrl() {
     let bgChoosen = Math.floor(Math.random() * numBackgrounds) + 1;
     return 'url("/images/bg' + bgChoosen + '.jpg")';
 }
+var height;
+
 $(document).ready(function() {
     let images = ['1','2','3','4','5','6','7','8','9'];
     preload(images);
@@ -52,25 +68,29 @@ $(document).ready(function() {
 
     $(".ranking").each(function () {
 
-        var valueAsString = $(this).html();
+        var yearsData = $(this).html();
+        // var yearsData = $(this).attr('data-yrs');
         var hideNumber = false;
-        if (valueAsString.includes("-")) {
+        if (yearsData.includes("-")) {
             hideNumber = true
-            valueAsString = valueAsString.replace('-','');
+            yearsData = yearsData.replace('-','');
         }
 
-        var value = Number(valueAsString);
+        var value = Number(yearsData);
         var percentage = (value * (1.0/14.0) * ($(this).width() - 10)) + "px";
         $(this).html("");
+        var suffix = value < 5 ? " " : " yrs"
+        var stringForLabel = value + suffix;
         if (hideNumber) {
-            value = ""
+            stringForLabel = ""
         }
-        $(this).append("<div class='ranking-bar' style='width:" + percentage + "'>" + value + "</div>");
+        $(this).append("<div class='ranking-bar' style='width:" + percentage + "'><div class='rank-yrs'>" + stringForLabel + "</div></div>");
 //        $(this).css("width", percentage);
     });
-
-    let height = $(document).height();
+    height = $(document).height();
+    // let height = $(document).height();
     $("#content-container").height(height);
+
     // $('#fullpage-wrapper').css("top", "20px");
 })
 
