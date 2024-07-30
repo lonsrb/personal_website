@@ -192,6 +192,15 @@ position: relative;
     /*top: -4px;*/
 }
 
+.skill-note {
+    font-style: italic;
+    color: #676767;
+    font-size: 11px;
+    padding-left: 10px;
+    font-weight: normal;
+    display: inline-block;
+}
+
 .years
 {
     font-style: italic;
