@@ -10,11 +10,7 @@ get '/' do
   erb :index
 end
 
-class HelloWorldApp < Sinatra::Base
-  # get '/' do
-  #   @name = "Kira"
-  #   erb :index
-  # end
+class PersonalWebsite < Sinatra::Base
 
   get '/' do
     'Hello world!'
