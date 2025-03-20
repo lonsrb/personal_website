@@ -6,6 +6,11 @@ require 'sinatra'
 class PersonalWebsite < Sinatra::Base
   set :port, 8080
 
+  configure :production do
+    # List all domains (and subdomains) you want to allow
+    set :allowed_hosts, ['ryanlons.com', 'www.ryanlons.com']
+  end
+
   get '/' do
     'Hello world!'
     erb :index
