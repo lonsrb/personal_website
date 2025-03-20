@@ -1,20 +1,13 @@
 # app.rb
 require 'sinatra'
 
-set :port, 8080
-# set :static, true
-# set :bind, '0.0.0.0'
 
-get '/' do
-  @name = "Kira"
-  erb :index
-end
 
 class PersonalWebsite < Sinatra::Base
+  set :port, 8080
 
   get '/' do
     'Hello world!'
-    @name = "Kira"
     erb :index
   end
 
