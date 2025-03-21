@@ -1,8 +1,6 @@
 # app.rb
 require 'sinatra'
 
-
-
 class PersonalWebsite < Sinatra::Base
   set :port, 8080
 
@@ -16,12 +14,6 @@ class PersonalWebsite < Sinatra::Base
     erb :index
   end
 
-  # get '/:name' do
-  #   "Hello, #{params[:name]}!"
-  # end
-  # http://localhost:9292/listings?startIndex=0&count=20&propertyType=land
-  #http://localhost:9292/listings?startIndex=21&count=20&propertyType=land,house
-  #
   get '/listings' do
     start_index = params[:startIndex]
     count = params[:count]
@@ -50,7 +42,6 @@ class PersonalWebsite < Sinatra::Base
 
     end
     JSON.pretty_generate(data_array)
-
   end  #ends get listings
 
   post '/favorite' do
