@@ -14,6 +14,7 @@ function beforePrint() {
     $('#fullpage-wrapper').height(1000);
     $('body').height(1053);
     $("#content-container").height(1002);
+    $('#fullpage-wrapper').css({'background-image': 'url("/images/bg3.jpg")'});
 }
 
 function afterPrint() {
@@ -21,6 +22,7 @@ function afterPrint() {
     $("#content-container").height(height);
     $('#fullpage-wrapper').height(height);
     $('body').height(height+80);
+    $('#fullpage-wrapper').css({"background-image": getBGImageUrl()});
 }
 
 function getBGImageUrlForNumber(number) {

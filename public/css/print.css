@@ -55,6 +55,7 @@ h3.summary {
     font-weight: normal;
     padding-top: 0px;
     padding-bottom: 10px;
+    text-align: center;
 }
 
 
@@ -78,7 +79,7 @@ position: relative;
     /*background-color: rgba(189, 58, 148, 0.66);*/
 
     margin: 15px;
-    padding: 11px;
+    padding: 11px 0;
     padding-top: 8px;
     overflow: hidden;
 
@@ -94,6 +95,7 @@ position: relative;
     /*font-weight: bold;*/
     /*font-size: larger;*/
     color: #00262e;
+    /* color:#459b91; */
     /*padding: 0 25px;*/
     padding: 0;
     letter-spacing: 8px;
@@ -101,10 +103,12 @@ position: relative;
 }
 
 .description {
-    width: 100%;
+    /* width: 100%; */
     font-size: 17px;
     margin: 8px 0;
+    text-align: center;
 }
+
 
 #header {
     width: 100%;
@@ -125,9 +129,10 @@ position: relative;
 
 .profile-image {
     vertical-align: middle;
-    display: inline-block;
+    display: none;
     border-radius: 50%;
-    border: #ffffff 9px solid;
+    /* border: #ffffff 9px solid; */
+    border: #ff00ff 9px solid;
     /*width: 200px;*/
     height: 120px;
     margin-bottom: 15px;
@@ -147,7 +152,7 @@ position: relative;
 }
 
 #skills {
-    margin: 0 auto;
+    margin: 0;
     position: relative;
     min-height: 400px;
     text-align: center;
@@ -183,6 +188,38 @@ position: relative;
     border-left: solid 1px rgba(184, 184, 184, 0.42);
 }
 
+
+.title-container {
+    /* width: 80%; */
+    text-align: center;
+    /* background-color: #459b91; */
+    margin: 0 auto;
+    display: block;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgba(219, 219, 219, 0.42);
+    /* margin-bottom: 5px; */
+    
+}
+
+.left-column{
+    /* padding-top: 135px; */
+    width: 175px;
+    padding-left: 10px;
+    margin-right: 10px;
+    /* padding-bottom: 20px; */
+    background-color: #0078853f;
+    /* background-color: #48bcc62d; */
+    /* padding-left: 20px; */
+    /* margin-right: auto; */
+height: 100%;
+    margin-left: 0; 
+}
+
+.main-body-column {
+    float: left;
+    padding-left: 10px;
+    width: 74%;
+}
 
 .left-column-header-title{
     /*flex-grow:0;*/
@@ -256,10 +293,9 @@ h3.role-sub-title {
 }
 
 .contact-info {
-    text-align: left;
-    width: 100%;
+    text-align: center;
     font-size: 13px;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     display: block;
 }
 
@@ -272,7 +308,8 @@ h3.role-sub-title {
 .contact-info .contact-item {
     display: inline-block;
     vertical-align: top;
-    padding-right: 85px;
+    padding-left: 20px;
+    padding-right: 20px;
     color: #007785;
 }
 
@@ -305,13 +342,10 @@ h3.role-sub-title {
 
 .left-column {
     float: left;
-    width: 25%;
+    
 }
 
-.main-body-column {
-    float: left;
-    width: 74%;
-}
+
 
 .previous-roles-list {
     /*background-color: #ff0202;*/
@@ -326,7 +360,7 @@ h3.role-sub-title {
     border-top: solid 1px rgba(184, 184, 184, 0.42);
 }
 .previous-roles-list>li>ul {
-    margin-top: 3px;
+    margin-top: 4px;
     list-style-type: disc;
     margin-left: 0px;
     padding-left: 10px;
